@@ -1,0 +1,31 @@
+# Python virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Byte-compiled / Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Model weights & large binaries
+*.pt
+*.onnx
+*.engine
+
+# Video outputs & recordings
+*.mp4
+*.avi
+*.mov
+*.mkv
+
+# SQLite databases (if testing locally)
+*.db
+*.sqlite3
+
+# IDE / OS settings
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
