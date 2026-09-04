@@ -1,1 +1,1 @@
-web: pip uninstall -y opencv-python; uvicorn dect:app --host 0.0.0.0 --port $PORT
+web: uvicorn dect:app --host 0.0.0.0 --port $PORT
