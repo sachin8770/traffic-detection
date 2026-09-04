@@ -11,6 +11,17 @@ import base64                 # converts binary image data into text so it can g
 app = FastAPI()
 # creates the FastAPI application instance - this is what uvicorn actually runs
 
+@app.get("/")
+def read_root():
+    return {
+        "status": "online",
+        "message": "Traffic Detection API is running!",
+        "endpoints": {
+            "/detect-all": "GET request to count vehicles in all lanes instantly",
+            "/ws/{lane}": "WebSocket connection for live video stream (lanes: north, south, east, west)"
+        }
+    }
+
 model = YOLO("yolo11n.pt")
 # loads the pretrained YOLOv8 "nano" model - reliable, well-tested COCO classes, no fine-tuning risk
 
